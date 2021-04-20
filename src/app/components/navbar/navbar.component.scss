@@ -1,0 +1,45 @@
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-wrapper{
+    display: inline-flex;
+    align-items: center;
+    span{
+        font-size: 20px;
+        color: white;
+        font-weight: inherit;
+    }
+}
+.navbar-collapse{
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: flex-end!important;
+}
+button{
+    background-color: transparent;
+    border: 0px solid;
+    font-size: 1.5em;
+    
+    i{
+        color: white;
+    }
+}
+button:hover{
+    background-color: rgba(213, 211, 211, 0.385);
+}
+button:focus{
+    outline: none;
+}
+.menu-toogle{
+    display: none;
+}
+@media only screen and (max-width: 800px) {  /* 540px */
+  
+  }

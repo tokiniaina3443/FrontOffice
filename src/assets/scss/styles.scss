@@ -1,0 +1,332 @@
+$color-text:#8a8a8a;
+$color-title:#3c4858;
+$color-border:#3c4858;
+$color-back-white:white;
+* {
+    font-family: 'Lato', Helvetica, sans-serif;
+    line-height: 1.5;
+  }
+.content{
+    width: 100%;
+    margin: 0px auto;
+    min-height: 10em;
+    background-color: $color-back-white;
+    display: grid;
+    margin-top:50px;
+    padding: 5px;
+    border-radius: 5px;
+    .title-content{
+        text-align: left;
+        width: 100%;
+        //display: flex;
+        border-radius: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        border-bottom: 1px solid;
+        padding: 5px 0px;
+        border-color: rgba(169, 169, 169, 0.508);
+    }
+    .body-content{
+        width:95%;
+        display: block;
+        height: auto;
+        padding: 10px;
+        margin: 0px auto;
+    }
+    .h-2{
+        height: 2em;
+    }
+    .h-3{
+        height: 3em;
+    }
+    .h-4{
+        height: 4em;
+    }
+    .h-5{
+        height: 5em;
+    }
+    .h-auto{
+        height:auto;
+    }
+    
+}
+h1,h2,h3,h4{
+    margin: 5px;
+    padding: 0px;
+    font-weight: 600;
+}
+p{
+    margin: 2px auto;
+    padding: 0px;
+}
+.title{
+    color: $color-title;
+}
+.input-content{
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+}
+.input{
+    width: 85%;
+    margin: 5px auto;
+    height: 2em;
+    border: 0px solid;
+    border-bottom: 1px solid!important;
+
+}
+
+.button-secondary{
+    width: 20%;
+    height: 2.5em;
+    border: 0px solid;
+    border-radius: 5px;
+    background: #01e49d;
+    color: white;
+    margin: 15px auto;
+}
+.button-tertiaire{
+    width: 90%;
+    margin: 0px auto;
+    height: 2em;
+    border: 0px solid;
+    border-radius: 5px;
+    background: #01e49d;
+    color: white;
+    margin: 0px auto;
+}
+button:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+
+.input:focus{
+    outline: none;
+}
+table {
+    margin-top: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: $color-text;
+}
+thead{
+    background: #f7f7f7;
+}
+
+td, th {
+    font-size: .90rem;
+    font-weight: 500;
+    border-top-width: 0;
+    border-bottom-width: 1px;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(0,0,0,.06);
+}
+td{
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+tr{
+    position: relative;
+    text-align: justify;
+}
+
+tr:nth-child(even) {
+    background-color: $color-back-white;
+   
+}
+label{
+    display: flex;
+    align-items: center;
+    span{
+        width: 100%;
+        font-size: 14px;
+        color: $color-text;
+    }
+}
+.c-blue{
+    color:#5e72e4!important
+}
+.c-orange{
+    color: #fb6340!important;
+}
+
+.c-yellow{
+    color: #ffd600!important;
+}
+.c-red{
+    color: #f5365c!important;
+}
+
+.b-blue{
+    background-color:#5e72e4!important;
+    color: white;
+}
+.b-orange{
+    background-color: #fb6340!important;
+    color: white;
+}
+
+.b-yellow{
+    background-color: #ffd600!important;
+    color: white;
+}
+.b-red{
+    background-color: #f5365c!important;
+    color: white;
+}
+
+.round{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 0px auto;
+    border-radius: 50%;
+    align-items: center;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: .375rem;
+    background-color: $color-back-white;
+    background-clip: border-box;
+    margin: 40px auto 0px auto;
+    padding: 10px;
+    color: $color-text;
+}
+.select{
+    width: 20%;
+    border: 0.5px solid;
+    border-radius: 6px;
+    height: 1.8em;
+    /* margin: 0px; */
+    margin-left: 0px;
+    margin-right: auto;
+    border-color: lightgrey;
+}
+.btn-small{
+    margin: 0px 0px 0px 15px;
+    width: 5em;
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+.input-small{
+    width: 70px;
+    height: 1.3em;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    margin: 0px 0px 0px 10px;
+}
+
+.loginComponent{
+   width: 100%;
+   min-height: 300px;
+   background-color: white;
+   border-radius:5px ;
+}
+/* Login  */
+.welcome-content{
+    transition:all 0.35s linear;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 20% auto;
+    .admin-icon{
+        background: #ececec;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 6em;
+    }
+}
+.content-input{
+    text-align: center;
+    margin: 20% auto;
+    .wrap-input{
+        width: 70%;
+        height: 2.3em;
+        margin: 20px auto;
+        padding: 2px;
+        background-color: #ececec;
+        border-radius: 20px;
+        input{
+            width: 75%;
+            background: transparent;
+            border: 0px solid;
+            height: 2.4em;
+        }
+        select{
+            width: 70%;
+            background: transparent;
+            border: 0px;
+        }
+        select,input:focus {
+            outline:  none;
+        }
+        i{
+            font-size: 1.5em;
+            margin: 8px 10px 0px 0px;
+        }
+    }
+    button{
+        width: 40%;
+        height: 2.5em;
+        border-radius: 20px;
+        background: #01e49d;
+        color: white;
+        border: 0px solid;
+    }
+    button:focus{
+        outline: none;
+    }
+    button:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .alert{
+        font-size: 11px;
+        border: 1px solid;
+        padding: 5px;
+        margin: 0px auto;
+        color: #ff864e;
+        border-color: #ff864e;
+    }
+    
+}
+.alert-succes{
+    font-size: 11px;
+    border: 1px solid;
+    padding: 5px;
+    margin: 0px auto;
+    color: #84ee82;
+    border-color: #84ee82;
+}
+.profile{
+    width: 60%;
+    height: 115px;
+    background-color: #d8d8d8;
+    font-size: 5em;
+    text-align: center;
+    margin: 0px auto;
+    border-radius: 50%;
+}
+.p-ul{
+    list-style: none;
+    width: 80%;
+    li{
+        width: 80%;
+    }
+}
+/* */

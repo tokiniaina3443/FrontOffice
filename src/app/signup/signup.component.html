@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <div class="row loginComponent">
+              <div class="col-6">
+                <div class="welcome-content">
+                        <img src="../../assets/images/logo2.png">
+                        <br/>
+                        <h2>Olla! Welcome</h2>
+                        <button class="button-primary" (click)="toLogin()">
+                            Log In
+                        </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="content-input">
+                  <h2>Sign up</h2>
+                  <div class="wrap-input">
+                    <i class="fa fa-user"></i>
+                    <input #input1 type="text" [(ngModel)]="user.name" placeholder="Name">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-user"></i>
+                    <input type="text" [(ngModel)]="user.firstname" placeholder="firstname">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-envelope-square"></i>
+                    <input type="text" [(ngModel)]="user.ncin" placeholder="CIN">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa  fa-envelope-o"></i>
+                    <input type="text" [(ngModel)]="user.email" placeholder="Email">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" [(ngModel)]="user.password" placeholder="Password">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" [(ngModel)]="user.confirmPassword" placeholder="Confirmed Password">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-phone-square"></i>
+                    <select  class="input-primary" [(ngModel)]="user.operateur">
+                         <option *ngFor="let item of operators" [value]="item.id">{{item.name}}</option>
+                    </select>
+                  </div>
+                  <button (click)="signup()">Sign up</button>
+                  <br>
+                  <span class="alert" [hidden]="message == '' ">
+                      {{message}}
+                  </span>
+                  <span class="alert-succes" [hidden]="messageSucces == '' ">
+                      {{messageSucces}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>

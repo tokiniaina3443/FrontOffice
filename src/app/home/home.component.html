@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="wrapper">
+        <div id="sidebar" class="sidebar">
+            <i *ngIf="isMEnuSow == false" (click)="showMenu()" class="fa fa-chevron-right"></i>
+            <i *ngIf="isMEnuSow == true" (click)="closeMenu()" class="fa fa-chevron-left"></i>
+            <app-sidemenu></app-sidemenu>
+        </div>
+        <div id="main-body" class="main-body">
+            <div class="row">
+                <div class="col-12">
+                        <app-navbar></app-navbar>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

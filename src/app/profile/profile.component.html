@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="content">
+                <div class="title-content">
+                    <h3>
+                        <i class="fa fa-user"></i>
+                        My profil
+                    </h3>
+                </div>
+                <div class="body-content">
+                    <div class="row">
+                        <div class="row">
+                            <button (click)="updateProfile()" class="button-primary">Update my profile</button>
+                        </div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" [(ngModel)]="user.name" class="input" placeholder="Name">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" [(ngModel)]="user.firstname" class="input" placeholder="Firstname">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" [(ngModel)]="user.ncin" class="input" placeholder="CIN">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" [(ngModel)]="user.email" class="input" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" [(ngModel)]="user.phoneNumber" class="input" disabled>
+                                </div>
+                                <span class="alert-succes" [hidden]="messageSucces == '' ">{{messageSucces}}</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="profile">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

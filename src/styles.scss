@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/style1.scss";
+@import "./assets/css/simple-grid.css";
+@import "./assets/css/font-awesome.min.css";
+@import "./assets/scss/styles.scss";
+
+body{
+    margin: 0px!important; background: linear-gradient(90deg, rgba(230,228,255,1) 0%, rgba(1,228,157,1) 0%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%);
+}

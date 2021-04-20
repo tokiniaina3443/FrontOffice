@@ -1,0 +1,16 @@
+<div class="sidemenu">
+    <div class="logo">
+        <img src="../../../assets/images/logo2.png" alt="">
+        <span>lla</span>
+    </div>
+    <div class="sidebar">
+        <ul class="nav">
+            <li class="{{routerLink.class}} nav-item" *ngFor="let routerLink of routerLinks" (click)="isActive()">
+                <a [routerLink]="routerLink.path" >
+                    <i class="{{routerLink.icon}}"></i>
+                    <p>{{routerLink.title}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

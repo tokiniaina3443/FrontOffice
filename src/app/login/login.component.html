@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <div class="row loginComponent">
+              <div class="col-6">
+                <div class="welcome-content">
+                        <img src="../../assets/images/logo2.png">
+                        <br/>
+                        <h2>Olla! Welcome</h2>
+                        <button class="button-primary" (click)="toSignup()">
+                            Sign in
+                        </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="content-input">
+                  <h2>Login</h2>
+                  <div class="wrap-input">
+                    <i class="fa fa-user"></i>
+                    <input #input1 type="text" [(ngModel)]="user.email" placeholder="Username">
+                  </div>
+                  <div class="wrap-input">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" [(ngModel)]="user.password" placeholder="Password">
+                  </div>
+                  <button (click)="login()">Login</button>
+                  <br>
+                  <span class="alert" [hidden]="message == '' ">
+                    <i class="fa fa-frown-o"></i>
+                      {{message}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
