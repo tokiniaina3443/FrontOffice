@@ -50,6 +50,13 @@
                   </div>
                   <button (click)="signup()">Sign up</button>
                   <br>
+
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <div class="loader"></div>
+                    </div>
+                  </div>
+                  
                   <span class="alert" [hidden]="message == '' ">
                       {{message}}
                   </span>

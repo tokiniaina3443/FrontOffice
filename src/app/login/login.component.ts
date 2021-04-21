@@ -24,29 +24,57 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
+  login()
+  {
     const OnSucces= (response : any) => {
-      console.log(response);
        if(response["status"]=='succes'){
-            this.storage.setToken(response["data"]);
-            this.router.navigateByUrl('home');
+         this.storage.setToken(response["data"]);
+         this.CloseModal();
+         this.router.navigateByUrl('home');
         }else if(response["status"]=='error'){
-            this.message = "email or password incorrect";
+          this.CloseModal();
+          this.message = "email or password incorrect";
         }
-    }
+        
+    };
+
     const OnError= (response : any) => {
-      //console.log(response);
+      this.CloseModal();
       if(response["status"]!=200){
-        this.message=message_server + response["status"];
+        this.message = message_server + response["status"];
       }
-    }
+    };
+
     try{
+        this.OpenModal();
         this.userService.sendHttpLogin(this.user).subscribe(OnSucces,OnError);
     }catch(err){
       this.message=err;
+      this.CloseModal();
     } 
   }
+
   toSignup(){
     this.router.navigateByUrl('signup');
   }
+
+  OpenModal()
+  {
+    let modal = document.getElementById("myModal");
+    if(modal)
+    {
+      modal.style.display = "block";
+    }
+  }
+
+  CloseModal()
+  {
+    let modal = document.getElementById("myModal");
+    console.log("clode modal");
+    if(modal)
+    {
+      modal.style.display = "none";
+    }
+  }
+
 }

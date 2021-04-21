@@ -38,6 +38,7 @@ export class SignupComponent implements OnInit {
       }else{
           this.message=message_err_signin;
       }
+      this.CloseModal();
     }
     const OnError= (response : any) => {
       if(response["status"]!=200){
@@ -45,13 +46,33 @@ export class SignupComponent implements OnInit {
       }
     }
     try{
+      this.OpenModal();
       this.userService.sendHttpSignup(this.user).subscribe(OnSucces,OnError);
     }catch(err){
       this.message=err;
+      this.CloseModal();
     }
   }
   
   toLogin(){
     this.router.navigateByUrl("login");
+  }
+
+  OpenModal()
+  {
+    let modal = document.getElementById("myModal");
+    if(modal)
+    {
+      modal.style.display = "block";
+    }
+  }
+
+  CloseModal()
+  {
+    let modal = document.getElementById("myModal");
+    if(modal)
+    {
+      modal.style.display = "none";
+    }
   }
 }
